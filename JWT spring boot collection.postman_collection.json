@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "162bf03b-188f-49a4-ad46-02adbabd758c",
+		"name": "JWT spring boot collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25019234"
+	},
+	"item": [
+		{
+			"name": "getAllProducts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJOaWtoaWwiLCJpYXQiOjE3MDEwMTgwOTIsImV4cCI6MTcwMTAxOTg5Mn0.CJbRhQt273qqPiijY99wm73K78ouornkcAVdx0we0ck",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add data and create table is not",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJOaWtoaWwiLCJpYXQiOjE3MDEwMTgwOTIsImV4cCI6MTcwMTAxOTg5Mn0.CJbRhQt273qqPiijY99wm73K78ouornkcAVdx0we0ck",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"table\": \"products\",\r\n    \"records\": [\r\n        {\r\n            \"entry_date\": \"03-01-2023\",\r\n            \"itemcode\": \"11111\",\r\n            \"itemname\": \"Test Inventory 1\",\r\n            \"itemquantity\": \"20\",\r\n            \"upc\": \"upc-11111\",\r\n            \"ean\": \"ean-11111\",\r\n            \"sku\": \"sku-11111\",\r\n            \"isbn\": \"isbn-11111\",\r\n            \"mpc\": \"mpc-11111\",\r\n            \"sStatus\": \"Paid\"\r\n        },\r\n        {\r\n            \"entry_date\": \"03-01-2023\",\r\n            \"itemcode\": \"22222\",\r\n            \"itemname\": \"Test Inventory 2\",\r\n            \"itemquantity\": \"20\",\r\n            \"upc\": \"upc-22222\",\r\n            \"ean\": \"ean-22222\",\r\n            \"sku\": \"sku-22222\",\r\n            \"isbn\": \"isbn-22222\",\r\n            \"mpc\": \"mpc-22222\",\r\n            \"sStatus\": \"Paid\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Nikhil\",\r\n \"password\" : \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Nikhil\",\r\n \"password\" : \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
